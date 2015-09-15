@@ -6,7 +6,7 @@ TODO: Describe the installation process
 ## Usage
 TODO: Write usage instructions
 
-`java code`
+==`java code`==
 
 ## Contributing
 1. Fork it!
