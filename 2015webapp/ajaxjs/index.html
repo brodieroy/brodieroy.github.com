@@ -1,0 +1,27 @@
+<html>
+    <script>
+    var httpRequest = new XMLHttpRequest(); 
+    function sendAjax(){
+        httpRequest.onreadystatechange=receiveMsg;
+        httpRequest.open('GET', '../server/textdata.jsp');
+        httpRequest.send();
+    }
+    function receiveMsg(){
+        console.log(httpRequest);
+        if(httpRequest.readyState == 4){
+            if(httpRequest.status == 200){
+                console.log(httpRequest);
+                document.getElementById("result").innerHTML = 
+                    httpRequest.responseText;
+            }
+        }
+    }
+    </script>
+    <body>
+    
+        <input type="button" value="Ajax 서버 호출" onClick="sendAjax()">
+        <br/>
+        <br/>
+        <textarea id="result"></textarea>
+    </body>
+</html>
